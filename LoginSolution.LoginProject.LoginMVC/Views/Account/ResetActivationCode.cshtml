@@ -1,0 +1,22 @@
+﻿@{
+	ViewData["Title"] = "Reset Password";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<div>
+	<form asp-controller="Account" asp-action="ResetActivationCode">
+		<div class="form-group">
+			<div class="mb-3">
+				<label for="Email" class="form-label">Email</label>
+				<input type="email" class="form-control" id="Email" name="Email" placeholder="Email:">
+			</div>
+		</div>
+		<br />
+		<div>
+			<button type="submit" class="btn btn-primary">Send Reset Code</button>
+		</div>
+
+	</form>
+</div>
+

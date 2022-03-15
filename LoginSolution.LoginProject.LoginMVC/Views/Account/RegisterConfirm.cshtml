@@ -1,0 +1,30 @@
+﻿@model LoginConfirmModel
+@{
+    ViewData["Title"] = "Register Confirm";
+}
+<h1>@ViewData["Title"]</h1>
+
+
+<div>
+	<form asp-controller="Account" asp-action="RegisterConfirm">
+		<div class="form-group">
+			@Html.LabelFor(model => model.Email, new { @class = "sr-only", @for = "Email" })
+			@Html.TextBoxFor(model => model.Email, new { @class = "form-control", @placeholder = "Email:" , @id="Email" })
+			@Html.ValidationMessageFor(model => model.Email)
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(model => model.Password, new { @class = "sr-only", @for = "Password" })
+			@Html.TextBoxFor(model => model.Password, new { @class = "form-control", @placeholder = "Password" , @id="Password" })
+			@Html.ValidationMessageFor(model => model.Password)
+		</div>
+
+		<div class="form-group">
+			@Html.LabelFor(model => model.ActivationCode, new { @class = "sr-only", @for = "ActivationCode" })
+			@Html.TextBoxFor(model => model.ActivationCode, new { @class = "form-control", @placeholder = "ActivationCode:" , @id="ActivationCode" })
+			@Html.ValidationMessageFor(model => model.ActivationCode)
+		</div>
+		<br />
+		<button type="submit" class="btn btn-primary">Register Confirm</button>
+	</form>
+</div>

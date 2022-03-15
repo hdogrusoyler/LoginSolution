@@ -1,0 +1,54 @@
+﻿@{
+	ViewData["Title"] = "Summary";
+}
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+	<p>How many new users are successfully registered within a time period? : <b>@ViewBag?.RegisteredUserCount</b></p>
+	
+</div>
+<div class="row">
+	<p>How long it takes to complete activate? (average in seconds) : <b>@ViewBag?.AverageTimeCompleteActivate</b></p>
+	
+</div>
+<div class="row">
+	<p>UnactivatedUserCount : <b>@ViewBag?.UnactivatedUserCount</b></p>
+	
+</div>
+<div class="row">
+</div>
+
+<br />
+<br />
+
+<div>
+	<form asp-controller="Home" asp-action="List">
+		<div class="row">
+			How many new users are successfully registered within a time period?
+		</div>
+		<div class="row">
+			<div class="col-3">
+				<label for="startDate" class="form-label">Start Date</label>
+				<input type="date" class="form-control" name="startDate">
+			</div>
+			<div class="col-3">
+				<label for="endDate" class="form-label">End Date</label>
+				<input type="date" class="form-control" name="endDate">
+			</div>
+		</div>
+		<div class="row">
+			How long it takes to complete activate?
+		</div>
+		<div class="row">
+			<div class="col-3">
+				<div class="form-group">
+					<label for="date" class="form-label">Date</label>
+					<input type="date" class="form-control" name="date">
+				</div>
+			</div>
+		</div>
+
+		<br />
+		<button type="submit" class="btn btn-primary">Getir</button>
+	</form>
+</div>
